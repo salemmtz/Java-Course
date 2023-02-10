@@ -12,7 +12,10 @@ public class Main {
 //
 //        car.describeCar();
 
-        Account user = new Account();
+        /////////////////////////////////////////////////////////////////////////////////
+        //// CONSTRUCTORS ///////////
+
+       /* Account user = new Account();
 //        Account user = new Account("12345", 1200.00, "Salem", "salem@gmail.com", "123456789");
         System.out.println(user.getAccountNumber());
         System.out.println(user.getAccountBalance());
@@ -29,5 +32,9 @@ public class Main {
         user.withdrawFunds(3000);
 
         System.out.println(user.getCustomerName());
+
+        Account timsAccount = new Account("Tim","tim@gmail.com","12345");
+        System.out.println("AccountNo: " + timsAccount.getAccountNumber() +
+                "; name: " + timsAccount.getCustomerName());*/
     }
 }

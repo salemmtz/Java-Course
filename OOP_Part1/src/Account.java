@@ -19,6 +19,10 @@ public class Account {
         this.phoneNumber = phone;
     }
 
+    public Account(String customerName, String email, String phoneNumber) {
+        this("99999", 100.55,customerName,customerName,phoneNumber);
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
