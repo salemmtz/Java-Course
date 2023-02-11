@@ -14,6 +14,7 @@ public class Main {
 
         /////////////////////////////////////////////////////////////////////////////////
         //// CONSTRUCTORS ///////////
+        ////////////////////////////////////////////////////////////////////////////////
 
        /* Account user = new Account();
 //        Account user = new Account("12345", 1200.00, "Salem", "salem@gmail.com", "123456789");
@@ -36,5 +37,24 @@ public class Main {
         Account timsAccount = new Account("Tim","tim@gmail.com","12345");
         System.out.println("AccountNo: " + timsAccount.getAccountNumber() +
                 "; name: " + timsAccount.getCustomerName());*/
+
+        /////////////////////////////////////////////////////////////////////////////////
+        //// CONSTRUCTOR CHALLENGE ///////////
+        ////////////////////////////////////////////////////////////////////////////////
+
+        Customer customer1 = new Customer("Salem",1000, "salem@gmail.com");
+        System.out.println(customer1.getName());
+        System.out.println(customer1.getCreditLimit());
+        System.out.println(customer1.getEmail());
+
+        Customer customer2 = new Customer();
+        System.out.println(customer2.getName());
+        System.out.println(customer2.getCreditLimit());
+        System.out.println(customer2.getEmail());
+
+        Customer customer3 = new Customer("Salem","salem@gmail.com");
+        System.out.println(customer3.getName());
+        System.out.println(customer3.getCreditLimit());
+        System.out.println(customer3.getEmail());
     }
 }
