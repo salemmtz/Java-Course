@@ -12,6 +12,8 @@ public class Main {
 //
 //        car.describeCar();
 
+
+
         /////////////////////////////////////////////////////////////////////////////////
         //// CONSTRUCTORS ///////////
         ////////////////////////////////////////////////////////////////////////////////
@@ -38,11 +40,13 @@ public class Main {
         System.out.println("AccountNo: " + timsAccount.getAccountNumber() +
                 "; name: " + timsAccount.getCustomerName());*/
 
-        /////////////////////////////////////////////////////////////////////////////////
-        //// CONSTRUCTOR CHALLENGE ///////////
-        ////////////////////////////////////////////////////////////////////////////////
 
-        Customer customer1 = new Customer("Salem",1000, "salem@gmail.com");
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+        ////////////  CONSTRUCTOR CHALLENGE  ///////////
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        /*Customer customer1 = new Customer("Salem",1000, "salem@gmail.com");
         System.out.println(customer1.getName());
         System.out.println(customer1.getCreditLimit());
         System.out.println(customer1.getEmail());
@@ -55,6 +59,37 @@ public class Main {
         Customer customer3 = new Customer("Salem","salem@gmail.com");
         System.out.println(customer3.getName());
         System.out.println(customer3.getCreditLimit());
-        System.out.println(customer3.getEmail());
+        System.out.println(customer3.getEmail());*/
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+        ////////////  THE POJO  ///////////
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+//        for (int i = 1; i<=5; i++){
+//            Student s = new Student("S92300" + i, switch(i){
+//                case 1 -> "Mary";
+//                case 2 -> "Carol";
+//                case 3 -> "Tim";
+//                case 4 -> "Harry";
+//                case 5 -> "Lisa";
+//                default -> "Anonymous";
+//            }, "05/11/1985", "Java Masterclass");
+//            System.out.println(s);
+//        }
+
+        // THE RECORD
+        for (int i = 1; i<=5; i++){
+            LPAStudent s = new LPAStudent("S92300" + i, switch(i){
+                case 1 -> "Mary";
+                case 2 -> "Carol";
+                case 3 -> "Tim";  
+                case 4 -> "Harry";
+                case 5 -> "Lisa";
+                default -> "Anonymous";
+            }, "05/11/1985", "Java Masterclass");
+            System.out.println(s);
+        }
     }
 }
