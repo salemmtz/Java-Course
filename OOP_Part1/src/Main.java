@@ -13,10 +13,9 @@ public class Main {
 //        car.describeCar();
 
 
-
-        /////////////////////////////////////////////////////////////////////////////////
-        //// CONSTRUCTORS ///////////
-        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        //// CONSTRUCTORS /////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
        /* Account user = new Account();
 //        Account user = new Account("12345", 1200.00, "Salem", "salem@gmail.com", "123456789");
@@ -41,10 +40,9 @@ public class Main {
                 "; name: " + timsAccount.getCustomerName());*/
 
 
-
-        ////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////  CONSTRUCTOR CHALLENGE  ///////////
-        ///////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         /*Customer customer1 = new Customer("Salem",1000, "salem@gmail.com");
         System.out.println(customer1.getName());
@@ -62,10 +60,9 @@ public class Main {
         System.out.println(customer3.getEmail());*/
 
 
-
-        ////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////  THE POJO  ///////////
-        ///////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //        for (int i = 1; i<=5; i++){
 //            Student s = new Student("S92300" + i, switch(i){
@@ -93,12 +90,11 @@ public class Main {
         }*/
 
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////  INHERITANCE  ///////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        ////////////////////////////////////////////////////////////////////////////////////////
-        ////////////  INHERITANCE  ///////////
-        ///////////////////////////////////////////////////////////////////////////////////////
-
-        Animal animal = new Animal("Generic Animal", "Huge", 400);
+        /*Animal animal = new Animal("Generic Animal", "Huge", 400);
         doAnimalStuff(animal,"slow");
 
         Dog dog = new Dog();
@@ -114,16 +110,136 @@ public class Main {
         doAnimalStuff(wolf,"slow");
 
         Fish goldie = new Fish("Goldfish", 0.25,2,3);
-        doAnimalStuff(goldie, "fast");
+        doAnimalStuff(goldie, "fast");*/
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////  THE TEXT BLOCK AND OTHER OPTIONS FORMATTING  ///////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /*String bulletIt = "Print a Bulleted List:\n" +
+                "\t\u2022 First Point\n" +
+                "\t\t\u2022 Sub Point";
+        System.out.println(bulletIt);
+
+        String textBlock = """
+                Print a Builleted Lis:
+                            \u2022 First Point
+                                \u2022 Sub Point
+                """;
+        System.out.println(textBlock);
+
+        int age = 35;
+        System.out.printf("Your age is %d%n",age);
+
+        int yearOfBirth = 2023-age;
+        System.out.printf("Age = %d, Birth year = %d%n", age, yearOfBirth);
+
+        System.out.printf("Your age is %.2f%n",(float)age);
+
+        for(int i=1; i <= 100000; i*= 10){
+            System.out.printf("Printing %6d %n",i);
+        }
+
+        String formattedString = String.format("Your age is %d", age);
+        System.out.println(formattedString);
+
+        formattedString = "Your age is %d".formatted(age);
+        System.out.println(formattedString);*/
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////  ANOTHER LOOK TO THE STRINGS  ///////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /*printInformation("Hello world");
+        printInformation("");
+        printInformation("\t \n");
+
+        String helloWorld = "Hello World";
+        System.out.printf("index of r = %d %n",helloWorld.indexOf('r'));
+        System.out.printf("index of World = %d %n",helloWorld.indexOf("World"));
+
+        System.out.printf("index of l = %d %n",helloWorld.indexOf('l'));
+        System.out.printf("index of l = %d %n",helloWorld.lastIndexOf('l'));
+
+        System.out.printf("index of l = %d %n",helloWorld.indexOf('l',3));
+        System.out.printf("index of l = %d %n",helloWorld.lastIndexOf('l',8));
+
+        String helloWorldLower = helloWorld.toLowerCase();
+        if(helloWorld.equals(helloWorldLower)){
+            System.out.println("Values match exactly");
+        }
+        if(helloWorld.equalsIgnoreCase(helloWorldLower)){
+            System.out.println("Values match exactly");
+        }
+
+        if(helloWorld.startsWith("Hello")){
+            System.out.println("Strings starts with Hello");
+        }
+        if(helloWorld.endsWith("World")){
+            System.out.println("Strings ends with World");
+        }
+        if(helloWorld.contains("World")){
+            System.out.println("Strings contains World");
+        }
+
+        if(helloWorld.contentEquals("Hello World")){
+            System.out.println("Values match exactly");
+        }*/
+
+
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////  THE STRINGBUILDER CLASS  ///////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        StringBuilder helloWorldBuilder = new StringBuilder("Hello" + " World");
+        helloWorldBuilder.append(" and Goodbye");
+
+        printInformation(helloWorldBuilder);
+
+        StringBuilder emptyStart = new StringBuilder();
+        emptyStart.append("a".repeat(17));
+        StringBuilder emptyStart32 = new StringBuilder(32);
+        emptyStart32.append("a".repeat(17));
+        printInformation(emptyStart);
+        printInformation(emptyStart32);
 
     }
 
-    public static void doAnimalStuff(Animal animal,String speed){
+    public static void doAnimalStuff(Animal animal, String speed) {
         animal.makesNoise();
         animal.move(speed);
         System.out.println(animal);
         System.out.println("_ _ _ _");
 
 
+    }
+
+    public static void printInformation(String string) {
+        int length = string.length();
+        System.out.printf("Length = %d %n", length);
+
+        if(string.isEmpty()){
+            System.out.println("String is empty");
+            return;
+        }
+        if(string.isBlank()){
+            System.out.println("String is blank");
+            return;
+        }
+
+        System.out.printf("First char = %c %n", string.charAt(0));
+
+        System.out.printf("Last char = %c %n", string.charAt(length - 1));
+    }
+
+    public static void printInformation(StringBuilder builder){
+        System.out.println("StringBuilder = " + builder);
+        System.out.println("length = " + builder.length());
+        System.out.println("capacity = " + builder.capacity());
+        System.out.println("-".repeat(16));
     }
 }
