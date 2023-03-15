@@ -195,17 +195,17 @@ public class Main {
         ////////  THE STRINGBUILDER CLASS  ///////////
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        StringBuilder helloWorldBuilder = new StringBuilder("Hello" + " World");
-        helloWorldBuilder.append(" and Goodbye");
-
-        printInformation(helloWorldBuilder);
-
-        StringBuilder emptyStart = new StringBuilder();
-        emptyStart.append("a".repeat(17));
-        StringBuilder emptyStart32 = new StringBuilder(32);
-        emptyStart32.append("a".repeat(17));
-        printInformation(emptyStart);
-        printInformation(emptyStart32);
+//        StringBuilder helloWorldBuilder = new StringBuilder("Hello" + " World");
+//        helloWorldBuilder.append(" and Goodbye");
+//
+//        printInformation(helloWorldBuilder);
+//
+//        StringBuilder emptyStart = new StringBuilder();
+//        emptyStart.append("a".repeat(17));
+//        StringBuilder emptyStart32 = new StringBuilder(32);
+//        emptyStart32.append("a".repeat(17));
+//        printInformation(emptyStart);
+//        printInformation(emptyStart32);
 
     }
 
